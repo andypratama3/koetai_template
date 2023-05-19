@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Tiket</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="blur-kuning"></div>
+    <img src="assets/img/logo-kms4.png" class="logo-kms-kuning">
+
+    <header>
+        <nav id="navbar">
+            <div class="teks-kms">KOETAI MAHKOTA SOUNDLINE</div>
+            <ul class="menu-nav">
+                <li>
+                    <a href="index.html">
+                        <button class="tombol-beranda">BERANDA</button>
+                    </a>
+                </li>
+                <li><button class="tombol-belanja">BELANJA</button></li>
+                <li><button class="tombol-tim">SEMUA TIM</button></li>
+            </ul>
+            <ul class="menu-nav">
+                <li>
+                    <a href="pesantik.html">
+                        <button class="tombol-pesantik active">PESAN TIKET</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <button class="tombol-login">LOGIN</button>
+                    </a>
+                </li>
+            </ul>
+            <div class="tombol-menu">
+                <i class="bx bx-menu"></i>
+            </div>
+        </nav>
+
+        <div class="dropdown-menu">
+            <li>
+                <a href="index.html">
+                    <button class="tombol-beranda">BERANDA</button>
+                </a>
+            </li>
+            <li><button class="tombol-belanja">BELANJA</button></li>
+            <li><button class="tombol-tim">SEMUA TIM</button></li>
+            <li>
+                <a href="pesantik.html"><button class="tombol-pesantik active">PESAN TIKET</button>
+                </a>
+            </li>
+            <li>
+                <a href="login.html"><button class="tombol-login">LOGIN</button>
+                </a>
+            </li>
+        </div>
+    </header>
+
+    <main>
+        <div id="container">
+            <div class="container-pesantik">
+                <div class="pesantik-atas">
+                    <img src="assets/img/logo-kms1.png" alt="">
+                    <h1>PESAN TIKET</h1>
+                </div>
+                <div class="pesantik-menu">
+                    <div class="form-menu">
+                        <div class="pilihan">
+                            <form action="">
+                                <div class="label-pesantik">Jenis Tiket</div>
+                                <select name="jenisTiket" id="jenisTiket">
+                                    <i class="bx bx-chevron-down"></i>
+                                    <option selected disabled value="Plih Jenis Tiket">
+                                        <div class="default-teks">Pilih Jenis Tiket</div>
+                                        <i class="bx bx-chevron-down"></i>
+                                    </option>
+                                    <option value="Reguler">Reguler</option>
+                                    <option value="Festival">Festival</option>
+                                </select>
+                                <div class="label-pesantik">Jumlah</div>
+                                <input type="number" name="jumlah" id="jumlah" placeholder="Jumlah">
+                                <input type="button" value="Checkout" class="checkout">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="sponsor">
+        <div class="container">
+            <h1>SPONSOR</h1>
+            <div class="sponsor-utama">
+                <img src="assets/img/sponsor1.png">
+            </div>
+            <div class="sponsor-lainnya">
+                <img src="assets/img/sponsor2.png">
+                <img src="assets/img/sponsor3.png">
+                <img src="assets/img/sponsor4.png">
+                <img src="assets/img/sponsor5.png">
+                <img src="assets/img/sponsor6.png">
+                <img src="assets/img/sponsor7.png">
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
