@@ -37,10 +37,10 @@ html {
 }
 
 .logo-kms-kuning {
-    position: absolute;
+    position: fixed;
     width: 40rem;
     height: 50rem;
-    top: 12rem;
+    bottom: 5rem;
     right: 0;
     z-index: -100;
 }
@@ -63,7 +63,7 @@ html {
     background: #f9f9f9;
 }
 
-
+/* HEADER */
 header {
     position: relative;
     padding: 0 2rem;
@@ -144,6 +144,8 @@ header #navbar .tombol-menu i {
     border-radius: 3px;
 }
 
+/* AKHIR HEADER */
+
 /* DROPDOWN NAVBAR*/
 header .dropdown-menu {
     display: none;
@@ -204,12 +206,16 @@ header .dropdown-menu li button:hover {
     border: 1px rgba(255, 183, 22, 0.8) solid;
 }
 
+/* AKHIR DROPDOWN NAVBAR */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/* MAIN */
 main {
-    /* height: auto; */
+    height: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
-    border: 1px blue solid;
+    /* border: 1px blue solid; */
     height: 75vh;
     margin-top: 70px;
 }
@@ -217,11 +223,16 @@ main {
 main #container {
     width: 90%;
     height: 100%;
-    /* border: 1px #fff solid; */
+    /* border: 2px green solid; */
     display: flex;
     justify-content: center;
 }
 
+/* AKHIR MAIN */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/* CONTAINER BERANDA */
 main #container .container-beranda {
     display: flex;
     width: 100%;
@@ -365,17 +376,24 @@ main #container .container-beranda .container-kanan .couple-container-kanan .dot
     transition: background-color .6s ease;
 }
 
-main #container .container-belanja {
+/* AKHIR CONTAINER BERANDA */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/* CONTAINER BELANJA DAN NAVBAR BELANJA */
+.container-belanja {
     width: 100%;
-    height: 100%;
+    margin-top: 70px;
+    padding-bottom: 30px;
     display: block;
     justify-content: center;
+    /* border: 2px purple solid; */
 }
 
-main #container .container-belanja .nav-belanja {
+.container-belanja .nav-belanja {
     width: 300px;
-    height: 30px;
-    margin: 0 auto 30px;
+    height: 40px;
+    margin: 0 auto 15px;
     background-color: var(--secondary);
     color: var(--primary);
     display: flex;
@@ -383,66 +401,87 @@ main #container .container-belanja .nav-belanja {
     align-items: center;
     box-sizing: border-box;
     border-radius: 20px;
+    /* border: 2px orangered solid; */
 }
 
-main #container .container-belanja .nav-belanja ul {
+.container-belanja .nav-belanja ul {
     list-style: none;
 }
 
-main #container .container-belanja .nav-belanja ul li {
+.container-belanja .nav-belanja ul li {
     display: inline-block;
     margin: 0 10px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     border: 1px var(--secondary) solid;
-    padding: 1px 10px;
+    padding: 3px 15px;
+    user-select: none;
     cursor: pointer;
 }
 
-main #container .container-belanja .nav-belanja ul li:hover {
+.container-belanja .nav-belanja ul li:hover {
     border: 1px var(--primary) solid;
     border-radius: 20px;
 }
 
-main #container .container-belanja .isi-belanja {
-    width: 90%;
-    height: 430px;
-    margin: -15px auto;
-    padding: 20px 30px;
-    background-color: var(--secondary);
+.container-belanja .nav-belanja ul li.active {
+    border: 1px #FFB716 solid;
     border-radius: 20px;
-    /* box-sizing: border-box; */
+    color: white;
+    background-color: var(--primary);
 }
 
-main #container .container-belanja .isi-belanja .container-isi {
+.container-belanja .isi-belanja {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    background-color: rgba(33, 42, 62, 0.5);
+    border-radius: 20px;
+    /* border: 2px green solid; */
+
+}
+
+.container-belanja .isi-belanja .container-isi {
     width: 100%;
-    height: 100%;
+    height: auto;
     /* border: 2px red solid; */
     box-sizing: border-box;
     justify-content: center;
     display: block;
     text-align: center;
-    margin: 0 auto;
 }
 
-main #container .container-belanja .isi-belanja .container-isi .produk {
+/* AKHIR CONTAINER BELANJA DAN NAVBAR BELANJA */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/* CONTAINER BELANJA BAJU */
+.container-belanja .isi-belanja .container-isi .belanja-baju {
+    display: block;
+    animation: masok .5s;
+}
+
+.container-belanja .isi-belanja .container-isi .belanja-baju .produk {
     border: 2px #111 solid;
     border-radius: 15px;
-    width: 180px;
-    height: 170px;
-    margin: 10px 20px 20px;
+    width: 190px;
+    height: auto;
+    margin: 20px 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     /* border: 2px red solid; */
     display: inline-block;
     justify-content: center;
-    background: linear-gradient(90deg, var(--secondary) 55%, rgba(255, 183, 22, 0.2) 45%);
+    background: linear-gradient(90deg, var(--secondary) 50%, rgba(255, 183, 22, 0.15) 50%);
     cursor: pointer;
+    transition: .2s all;
 }
 
-main #container .container-belanja .isi-belanja .container-isi .produk:hover {
-    transform: scale(1.09);
+.container-belanja .isi-belanja .container-isi .belanja-baju .produk:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-main #container .container-belanja .isi-belanja .container-isi .produk img {
+.container-belanja .isi-belanja .container-isi .belanja-baju .produk img {
     width: 100%;
     border-radius: 10px 10px 0 0;
     background-size: cover;
@@ -450,36 +489,324 @@ main #container .container-belanja .isi-belanja .container-isi .produk img {
     margin-bottom: 0;
 }
 
-main #container .container-belanja .isi-belanja .container-isi .produk .konten-bawah {
+.container-belanja .isi-belanja .container-isi .belanja-baju .produk .konten-bawah {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5px;
-    /* border: 2px red solid; */
-    border-radius: 0 0 13px 13px;
+    /* margin: 5px; */
+    padding: 5px;
 }
 
-main #container .container-belanja .isi-belanja .container-isi .produk .konten-bawah .teks {
+.container-belanja .isi-belanja .container-isi .belanja-baju .produk .konten-bawah .teks {
     color: var(--primary);
     font-size: 12px;
     display: flex;
     align-items: center;
+    padding: 0 3px;
 }
 
+.container-belanja .isi-belanja .container-isi .belanja-baju .produk .konten-bawah .nama-produk {
+    width: 100%;
+    display: block;
+}
+
+.container-belanja .isi-belanja .container-isi .belanja-baju .produk .konten-bawah .harga {
+    width: 100%;
+    display: block;
+}
+
+/* AKHIR CONTAINER BELANJA BAJU*/
+/* ===================================================================== */
+
+/* ===================================================================== */
+/* CONTAINER BELANJA MERCHANDISE */
+
+.container-belanja .isi-belanja .container-isi .belanja-mchan {
+    display: none;
+    animation: masok .5s;
+}
+
+.container-belanja .isi-belanja .container-isi .belanja-mchan .produk {
+    border: 2px #111 solid;
+    border-radius: 15px;
+    width: 190px;
+    height: auto;
+    margin: 20px 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    /* border: 2px red solid; */
+    display: inline-block;
+    justify-content: center;
+    background: linear-gradient(90deg, var(--secondary) 50%, rgba(255, 183, 22, 0.15) 50%);
+    cursor: pointer;
+    transition: .2s all;
+}
+
+.container-belanja .isi-belanja .container-isi .belanja-mchan .produk:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.container-belanja .isi-belanja .container-isi .belanja-mchan .produk img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0;
+}
+
+.container-belanja .isi-belanja .container-isi .belanja-mchan .produk .konten-bawah {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 5px; */
+    padding: 5px;
+}
+
+.container-belanja .isi-belanja .container-isi .belanja-mchan .produk .konten-bawah .teks {
+    color: var(--primary);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+}
+
+.container-belanja .isi-belanja .container-isi .belanja-mchan .produk .konten-bawah .nama-produk {
+    width: 100%;
+    display: block;
+}
+
+.container-belanja .isi-belanja .container-isi .belanja-mchan .produk .konten-bawah .harga {
+    width: 100%;
+    display: block;
+}
+
+/* AKHIR CONTAINER BELANJA MERCHANDISE */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/* CONTAINER BELANJA -> PRODUK KLIK */
+
+.container-belanja .overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: none;
+    top: 0px;
+    left: 0px;
+}
+
+.container-belanja .overlay .produk-klik {
+    /* width: 1150px;
+    height: 330px; */
+    position: fixed;
+    top: 25%;
+    right: 20%;
+    left: 20%;
+    bottom: 20%;
+    height: 0px;
+    display: none;
+    background-color: #FFF4E2;
+    border-radius: 20px;
+    padding: 40px 50px;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+
+.container-belanja .overlay .produk-klik.active {
+    display: block;
+    height: 430px;
+    animation: masok .3s forwards;
+}
+
+
+@keyframes masok {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.container-belanja .overlay .produk-klik .bx {
+    font-size: 36px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    color: #0B0B0C;
+}
+
+.container-belanja .overlay .produk-klik .konten-atas {
+    /* border: 2px green solid; */
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    text-align: left;
+}
+
+.container-belanja .overlay .produk-klik .konten-atas img {
+    width: 200px;
+    border: 1px #3D3D3D solid;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.container-belanja .overlay .produk-klik .konten-atas .teks-gambar {
+    /* height: 60px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 20px; */
+    display: inline-block;
+    margin-left: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    /* border: 1px black solid; */
+}
+
+.container-belanja .overlay .produk-klik .konten-atas .teks-gambar span {
+    color: rgba(61, 61, 61, 1);
+    font-weight: 600;
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 21px;
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .ukuran p {
+    margin-bottom: 3px;
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .ukuran button {
+    width: 35px;
+    height: 25px;
+    margin-left: -3px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .ukuran button:hover {
+    text-shadow: 0 0 1px var(--primary);
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .ukuran #l.active {
+    text-shadow: 0 0 5px var(--primary);
+    transform: scale(1.08);
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .ukuran #xl.active {
+    text-shadow: 0 0 5px var(--primary);
+    transform: scale(1.08);
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .ukuran #xxl.active {
+    text-shadow: 0 0 5px var(--primary);
+    transform: scale(1.08);
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .jumlah {
+    margin-top: 10px;
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .jumlah p {
+    margin-bottom: 3px;
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .jumlah input {
+    width: 105px;
+    /* background-color: var(--secondary);
+    color: var(--primary); */
+    padding: 3px 10px;
+}
+
+
+.container-belanja .overlay .produk-klik .konten-bawah .tombolnya {
+    /* border: 1px black solid; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 7%;
+    left: 20%;
+    right: 20%;
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .tombolnya button {
+    width: 200px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #FFF4E2;
+    border: transparent;
+    padding: 5px;
+    font-size: 12px;
+    margin: 0 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    transition: 0.2s all;
+    cursor: pointer;
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .tombolnya .atc {
+    background-color: var(--primary);
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .tombolnya .atc span {
+    transform: translateX(15px);
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .tombolnya .atc .bx {
+    color: white;
+    position: absolute;
+    top: 7px;
+    left: 25px;
+    /* border: 2px red solid; */
+    text-align: left;
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .tombolnya .beli {
+    background-color: #CA3537;
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .tombolnya .atc:hover {
+    box-shadow: 0 0 7px var(--primary);
+    transform: scale(1.03);
+}
+
+.container-belanja .overlay .produk-klik .konten-bawah .tombolnya .beli:hover {
+    box-shadow: 0 0 7px #CA3537;
+    transform: scale(1.03);
+}
+
+/* AKHIR CONTAINER BELANJA -> PRODUK KLIK */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/* CONTAINER PESAN TIKET */
 main #container .container-pesantik {
-    width: 60vh;
+    width: 70vh;
     height: 100%;
     border-radius: 20px;
     background-color: var(--secondary);
     box-sizing: border-box;
     align-items: center;
     display: block;
-    border: 2px red solid;
+    /* border: 2px red solid; */
 }
 
 main #container .container-pesantik .pesantik-atas {
     width: 100%;
-    border: 1px white solid;
+    /* border: 1px white solid; */
     display: block;
     justify-content: center;
     margin: 3vh auto 0 auto;
@@ -500,7 +827,7 @@ main #container .container-pesantik .pesantik-atas h1 {
 main #container .container-pesantik .pesantik-menu {
     width: 90%;
     height: 50%;
-    border: 2px white solid;
+    /* border: 2px white solid; */
     margin: 10% auto 0 auto;
     display: block;
 }
@@ -508,7 +835,7 @@ main #container .container-pesantik .pesantik-menu {
 main #container .container-pesantik .pesantik-menu .form-menu {
     width: 90%;
     height: 100%;
-    border: 2px blue solid;
+    /* border: 2px blue solid; */
     margin: 0 auto;
 }
 
@@ -554,6 +881,11 @@ main #container .container-pesantik .pesantik-menu .form-menu .pilihan .checkout
     transform: scale(0.97);
 }
 
+/* AKHIR CONTAINER PESAN TIKET */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/* CONTAINER SPONSOR */
 #sponsor {
     width: 100%;
     height: 100%;
@@ -609,10 +941,18 @@ main #container .container-pesantik .pesantik-menu .form-menu .pilihan .checkout
     filter: grayscale(0%) brightness(120%);
 }
 
+/* AKHIR CONTAINER SPONSOR*/
+/* ===================================================================== */
 
-/* RESPONSIVE */
+/* ===================================================================== */
+/* RESPONSIVE WIDTH 1900px*/
 @media (max-width: 1900px) {}
 
+/* AKHIR RESPONSIVE WIDTH 1900px */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/* RESPONSIVE WIDTH 1400px*/
 @media (max-width: 1400px) {
     main #container .container-beranda {
         width: 100%;
@@ -624,6 +964,11 @@ main #container .container-pesantik .pesantik-menu .form-menu .pilihan .checkout
     }
 }
 
+/* AKHIR RESPONSIVE WIDTH 1400px */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/* RESPONSIVE WIDTH 1200px */
 @media (max-width: 1200px) {
 
     header #navbar .teks-kms {
@@ -658,6 +1003,11 @@ main #container .container-pesantik .pesantik-menu .form-menu .pilihan .checkout
     }
 }
 
+/* AKHIR RESPONSIVE WIDTH 1200px */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/* RESPONSIVE WIDTH 992px */
 @media (max-width:992px) {
     header #navbar .teks-kms {
         font-size: 16px;
@@ -719,6 +1069,11 @@ main #container .container-pesantik .pesantik-menu .form-menu .pilihan .checkout
 
 }
 
+/* AKHIR RESPONSIVE WIDTH 992px */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/* RESPONSIVE WIDTH 768px */
 @media (max-width: 768px) {
     header #navbar .teks-kms {
         font-size: 18px;
@@ -821,6 +1176,11 @@ main #container .container-pesantik .pesantik-menu .form-menu .pilihan .checkout
 
 }
 
+/* AKHIR RESPONSIVE WIDTH 768px */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/* RESPONSIVE WIDTH 576px */
 @media (max-width: 576px) {
     header #navbar .teks-kms {
         font-size: 16px;
@@ -990,3 +1350,6 @@ main #container .container-pesantik .pesantik-menu .form-menu .pilihan .checkout
     }
 
 }
+
+/* AKHIR RESPONSIVE WIDTH 576px */
+/* ===================================================================== */
