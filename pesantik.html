@@ -95,7 +95,7 @@
                         <div class="pilihan">
                             <form action="">
                                 <div class="label-pesantik">Jenis Tiket</div>
-                                <select name="jenisTiket" id="jenisTiket">
+                                <!-- <select name="jenisTiket" id="jenisTiket">
                                     <i class="bx bx-chevron-down"></i>
                                     <option selected disabled value="Plih Jenis Tiket">
                                         <div class="default-teks">Pilih Jenis Tiket</div>
@@ -103,7 +103,17 @@
                                     </option>
                                     <option value="Reguler">Reguler</option>
                                     <option value="Festival">Festival</option>
-                                </select>
+                                </select> -->
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Jenis Tiket
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Regular</a></li>
+                                        <li><a class="dropdown-item" href="#">Festival</a></li>
+                                    </ul>
+                                </div>
                                 <div class="label-pesantik">Jumlah</div>
                                 <input type="number" name="jumlah" id="jumlah" placeholder="Jumlah">
                                 <input type="button" value="Checkout" class="checkout">
