@@ -1,3 +1,39 @@
+// BERANDA HEADER -> Variabel Dropdown
+const tombolMenu = document.querySelector("header .nav-bar .tombol-menu"),
+    tombolMenuIcon = document.querySelector("header .nav-bar .tombol-menu i"),
+    dropDownMenu = document.querySelector("header .dropdown-menu");
+
+// BERANDA HEADER -> Function Tombol Open Dropdown Navbar
+tombolMenu.onclick = function () {
+    dropDownMenu.classList.toggle("open")
+}
+
+// Belanja -> Navbar Belanja Di Click
+var navBaju = document.getElementById("nav-baju");
+var navMchan = document.getElementById("nav-mchan");
+var belanjaBaju = document.getElementById("belanja-baju");
+var belanjaMchan = document.getElementById("belanja-mchan");
+var isiBelanja = document.getElementById("isi-belanja")
+
+navBaju.onclick = function () {
+    navBaju.classList.add("active");
+    navMchan.classList.remove("active");
+    belanjaBaju.style.display = "block";
+    belanjaMchan.style.display = "none";
+    belanjaBaju.style.animation = "baju-in .8s";
+    isiBelanja.style.animation = "baju-in .8s";
+}
+
+navMchan.onclick = function () {
+    navMchan.classList.add("active");
+    navBaju.classList.remove("active");
+    belanjaMchan.style.display = "block";
+    belanjaBaju.style.display = "none";
+    belanjaMchan.style.animation = "mchan-in .8s";
+    isiBelanja.style.animation = "mchan-in .8s";
+}
+    
+
 // // BERANDA MAIN -> Variabel Carousel
 // const carouselRow = document.querySelector(".slides-row"),
 //     carouselSlides = document.getElementsByClassName("slide"),
@@ -87,17 +123,6 @@
 //     dots[index - 1].className += " active";
 // }
 
-
-// BERANDA HEADER -> Variabel Dropdown
-const tombolMenu = document.querySelector("header #navbar .tombol-menu"),
-    tombolMenuIcon = document.querySelector("header #navbar .tombol-menu i"),
-    dropDownMenu = document.querySelector("header .dropdown-menu");
-
-// BERANDA HEADER -> Function Tombol Open Dropdown Navbar
-tombolMenu.onclick = function () {
-    dropDownMenu.classList.toggle("open")
-}
-
 //Hide and Seek
 // var btn_elements = document.querySelectorAll("header li button");
 // var item_elements = document.querySelectorAll(".item");
@@ -122,60 +147,40 @@ tombolMenu.onclick = function () {
 //     });
 // }
 
-// Belanja -> Navbar Belanja Di Click
-var navBaju = document.getElementById("nav-baju");
-var navMchan = document.getElementById("nav-mchan");
-var belanjaBaju = document.getElementById("belanja-baju");
-var belanjaMchan = document.getElementById("belanja-mchan");
-
-navBaju.onclick = function () {
-    navBaju.classList.toggle("active");
-    navMchan.classList.remove("active");
-    belanjaBaju.style.display = "block";
-    belanjaMchan.style.display = "none";
-}
-
-navMchan.onclick = function () {
-    navMchan.classList.toggle("active");
-    navBaju.classList.remove("active");
-    belanjaMchan.style.display = "block";
-    belanjaBaju.style.display = "none";
-}
-
 // Belanja - > Produk Di Click
-var overlay = document.getElementById("overlay");
-var produkKlik = document.getElementById("produk-klik");
-var ukuranL = document.querySelector(".container-belanja .overlay .produk-klik .konten-bawah .ukuran #l")
-var ukuranXL = document.querySelector(".container-belanja .overlay .produk-klik .konten-bawah .ukuran #xl")
-var ukuranXXL = document.querySelector(".container-belanja .overlay .produk-klik .konten-bawah .ukuran #xxl")
-var l = document.getElementById("l");
-var xl = document.getElementById("xl");
-var xxl = document.getElementById("xxl");
+// var overlay = document.getElementById("overlay");
+// var produkKlik = document.getElementById("produk-klik");
+// var ukuranL = document.querySelector(".container-belanja .overlay .produk-klik .konten-bawah .ukuran #l")
+// var ukuranXL = document.querySelector(".container-belanja .overlay .produk-klik .konten-bawah .ukuran #xl")
+// var ukuranXXL = document.querySelector(".container-belanja .overlay .produk-klik .konten-bawah .ukuran #xxl")
+// var l = document.getElementById("l");
+// var xl = document.getElementById("xl");
+// var xxl = document.getElementById("xxl");
 
-function tampilProduk() {
-    overlay.style.display = "block";
-    produkKlik.classList.add("active");
-}
+// function tampilProduk() {
+//     overlay.style.display = "block";
+//     produkKlik.classList.add("active");
+// }
 
-function tutupProduk() {
-    overlay.style.display = "none";
-    produkKlik.classList.remove("active");
-}
+// function tutupProduk() {
+//     overlay.style.display = "none";
+//     produkKlik.classList.remove("active");
+// }
 
-l.onclick = function () {
-    ukuranL.classList.toggle("active");
-    ukuranXL.classList.remove("active");
-    ukuranXXL.classList.remove("active");
-}
+// l.onclick = function () {
+//     ukuranL.classList.toggle("active");
+//     ukuranXL.classList.remove("active");
+//     ukuranXXL.classList.remove("active");
+// }
 
-xl.onclick = function () {
-    ukuranL.classList.remove("active");
-    ukuranXL.classList.toggle("active");
-    ukuranXXL.classList.remove("active");
-}
+// xl.onclick = function () {
+//     ukuranL.classList.remove("active");
+//     ukuranXL.classList.toggle("active");
+//     ukuranXXL.classList.remove("active");
+// }
 
-xxl.onclick = function () {
-    ukuranL.classList.remove("active");
-    ukuranXL.classList.remove("active");
-    ukuranXXL.classList.toggle("active");
-}
+// xxl.onclick = function () {
+//     ukuranL.classList.remove("active");
+//     ukuranXL.classList.remove("active");
+//     ukuranXXL.classList.toggle("active");
+// }
