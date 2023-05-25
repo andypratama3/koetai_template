@@ -10,29 +10,29 @@ tombolMenu.onclick = function () {
 
 // Belanja -> Navbar Belanja Di Click
 var navBaju = document.getElementById("nav-baju");
-var navMchan = document.getElementById("nav-mchan");
+var navTotebag = document.getElementById("nav-totebag");
 var belanjaBaju = document.getElementById("belanja-baju");
-var belanjaMchan = document.getElementById("belanja-mchan");
+var belanjaTotebag = document.getElementById("belanja-totebag");
 var isiBelanja = document.getElementById("isi-belanja")
 
 navBaju.onclick = function () {
     navBaju.classList.add("active");
-    navMchan.classList.remove("active");
+    navTotebag.classList.remove("active");
     belanjaBaju.style.display = "block";
-    belanjaMchan.style.display = "none";
+    belanjaTotebag.style.display = "none";
     belanjaBaju.style.animation = "baju-in .8s";
     isiBelanja.style.animation = "baju-in .8s";
 }
 
-navMchan.onclick = function () {
-    navMchan.classList.add("active");
+navTotebag.onclick = function () {
+    navTotebag.classList.add("active");
     navBaju.classList.remove("active");
-    belanjaMchan.style.display = "block";
+    belanjaTotebag.style.display = "block";
     belanjaBaju.style.display = "none";
-    belanjaMchan.style.animation = "mchan-in .8s";
-    isiBelanja.style.animation = "mchan-in .8s";
+    belanjaTotebag.style.animation = "totebag-in .8s";
+    isiBelanja.style.animation = "totebag-in .8s";
 }
-    
+
 
 // // BERANDA MAIN -> Variabel Carousel
 // const carouselRow = document.querySelector(".slides-row"),
